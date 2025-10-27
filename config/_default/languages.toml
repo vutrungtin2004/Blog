@@ -1,0 +1,26 @@
+# Language Configuration for Vietnamese
+
+[vi]
+  languageCode = "vi"
+  languageName = "Tiếng Việt"
+  weight = 1
+  title = "Blog Của Trung Tín"
+  
+  [vi.params]
+    mainSections = ["posts"]
+    displayName = "VI"
+    isoCode = "vi"
+    rtl = false
+    dateFormat = "02/01/2006"
+    description = "Blog cá nhân chia sẻ kiến thức về lập trình mạng, Java và JavaScript"
+    
+  [vi.author]
+    name = "Trung Tín"
+    # image = "img/author.jpg"  # Commented out - sẽ dùng avatar mặc định
+    headline = "Lập trình viên đam mê Java & JavaScript"
+    bio = "Chào mừng đến với blog của tôi! Tôi chia sẻ kiến thức về lập trình mạng, Java và JavaScript."
+    links = [
+      { github = "https://github.com/trungtindev" },
+      { email = "mailto:trungtindev@gmail.com" }
+    ]
+

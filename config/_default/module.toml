@@ -1,0 +1,9 @@
+# Hugo Module Configuration for Blowfish Theme
+# Using local theme in blowfish/ folder
+# If you want to use Hugo modules, install Go first and run:
+# hugo mod init github.com/<username>/blogtin
+# hugo mod get -u
+
+# [[imports]]
+#   path = "github.com/nucocoracao/blowfish/v2"
+

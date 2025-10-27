@@ -1,0 +1,48 @@
+# Hugo Configuration for Blog Của Trung Tín
+baseURL = "https://trungtinblog.netlify.app/"
+theme = "blowfish"
+title = "Blog Của Trung Tín"
+languageCode = "vi"
+defaultContentLanguage = "vi"
+enableRobotsTXT = true
+summaryLength = 30
+enableEmoji = true
+
+# Pagination
+[pagination]
+  pagerSize = 12
+
+# Build configuration
+[build]
+  writeStats = true
+
+# Output formats
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+
+# Sitemap configuration
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
+
+# Taxonomies
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  author = "authors"
+  series = "series"
+
+# Security
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+    osEnv = ['(?i)^((HTTPS?|NO)_PROXY|PATH(EXT)?|APPDATA|TE?MP|TERM|GO\w+|(XDG_CONFIG_)?HOME|USERPROFILE|SSH_AUTH_SOCK|DISPLAY|LANG|SYSTEMDRIVE)$']
+  [security.funcs]
+    getenv = ['^HUGO_', '^CI$']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']
+

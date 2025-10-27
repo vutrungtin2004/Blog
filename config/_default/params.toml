@@ -1,0 +1,123 @@
+# Blowfish Theme Parameters for Blog Của Trung Tín
+
+# Color scheme
+colorScheme = "ocean"
+defaultAppearance = "light" # valid options: light or dark
+autoSwitchAppearance = true
+
+# Behavior
+enableSearch = true
+enableCodeCopy = true
+enableImageLazyLoading = true
+enableImageWebp = true
+
+# Fingerprintings & Assets
+fingerprint = true
+
+# Author
+[author]
+  name = "Vũ Trung Tín"
+  # image = "img/author.jpg"  # Commented out - sẽ dùng avatar mặc định
+  headline = "Full-stack Developer | Java & JavaScript"
+  bio = "Full-stack Developer chuyên về Java Backend và JavaScript Frontend. Sẵn sàng đóng góp vào các dự án web development với kỹ năng vững chắc và tinh thần học hỏi không ngừng."
+  links = [
+    { github = "https://github.com/vutrungtin2004" },
+    { facebook = "https://www.facebook.com/vu.trung.tin.657543" },
+    { email = "mailto:tintieutu0104@gmail.com" }
+  ]
+
+# Site header
+[header]
+  layout = "basic" # valid options: basic, hamburger, hybrid, custom
+  logo = "img/logo.png"
+  showTitle = true
+
+# Site footer
+[footer]
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+# Homepage layout
+[homepage]
+  layout = "background" # valid options: page, profile, hero, card, background, custom
+  homepageImage = "img/waves.svg" # Background image (waves animation)
+  showRecent = true
+  recentLimit = 9
+  showMoreLink = true
+  showMoreLinkDest = "/posts"
+  cardView = true
+  cardViewScreenWidth = false
+  layoutBackgroundBlur = true
+  layoutBackgroundHeaderSpace = true
+
+# Article layout
+[article]
+  showDate = true
+  showDateUpdated = true
+  showAuthor = true
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = true
+  showTaxonomies = true
+  showWordCount = true
+  showComments = false
+  sharingLinks = ["facebook", "twitter", "linkedin", "reddit", "whatsapp", "telegram", "email"]
+
+# List layout
+[list]
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = false
+  showTaxonomies = true
+  groupByYear = true
+  cardView = true
+  cardViewScreenWidth = false
+  paginationWidth = 1
+
+# Taxonomy (Tags, Categories pages)
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  heroStyle = "basic"
+  showBreadcrumbs = false
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  cardView = false
+  cardViewScreenWidth = false
+  groupByYear = false
+
+# Term (Individual tag/category pages - e.g., /tags/java/)
+[term]
+  showHero = false
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showViews = false
+  showLikes = false
+  showTableOfContents = false
+  groupByYear = true
+  cardView = true
+  cardViewScreenWidth = false
+
+# Sitemap
+[sitemap]
+  excludedKinds = []  # Include all pages in sitemap
+
+# Fathom Analytics
+[fathomAnalytics]
+  site = ""
+
+# Verification
+[verification]
+  google = ""
+  bing = ""
+  pinterest = ""
+  yandex = ""
+

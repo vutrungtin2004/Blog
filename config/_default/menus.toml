@@ -1,0 +1,35 @@
+# Navigation Menu Configuration
+
+# Main menu
+[[main]]
+  name = "Trang chủ"
+  pageRef = "/"
+  weight = 10
+
+[[main]]
+  name = "Blog"
+  pageRef = "posts"
+  weight = 20
+
+[[main]]
+  name = "Về tôi"
+  pageRef = "about"
+  weight = 30
+
+[[main]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 40
+
+# Footer menu
+[[footer]]
+  name = "Về tôi"
+  pageRef = "about"
+  weight = 10
+
+[[footer]]
+  name = "Tags"
+  pageRef = "tags"
+  weight = 20
+
+

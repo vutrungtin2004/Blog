@@ -1,0 +1,26 @@
+# Markup Configuration
+
+# Table of contents
+[tableOfContents]
+  endLevel = 4
+  ordered = false
+  startLevel = 2
+
+# Goldmark (Markdown renderer)
+[goldmark]
+  [goldmark.renderer]
+    unsafe = true
+  [goldmark.extensions]
+    [goldmark.extensions.typographer]
+      disable = false
+
+# Highlight (Code syntax highlighting)
+[highlight]
+  noClasses = false
+  lineNos = true
+  lineNumbersInTable = true
+  tabWidth = 4
+  guessSyntax = true
+  style = "monokai"
+
+
