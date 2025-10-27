@@ -1,15 +1,12 @@
 {{ $id := delimit (slice "gitea" (partial "functions/uid.html" .)) "-" }}
-{{- $giteaURL := print (.Get "server" | default .Site.Params.giteaDefaultServer) "/api/v1/repos/" (.Get "repo") -}}
+{{- $giteaURL := print (.Get "base_url") "/api/v1/repos/" (.Get "repo") -}}
 {{- $repoColors := .Site.Data.repoColors -}}
 {{- $giteaData := dict -}}
-{{- with try (resources.GetRemote $giteaURL) -}}
-  {{- with .Err -}}
-    {{- warnf "gitea shortcode: failed to fetch remote resource from %q: %s" $giteaURL $.Position -}}
-  {{- else with .Value -}}
-    {{- $giteaData = . | transform.Unmarshal -}}
-  {{- else -}}
-    {{- warnf "gitea shortcode: unable to get remote resource from %q: %s" $giteaURL $.Position -}}
-  {{- end -}}
+{{- $remote := resources.GetRemote $giteaURL -}}
+{{- if $remote -}}
+  {{- $giteaData = $remote | transform.Unmarshal -}}
+{{- else -}}
+  {{- warnf "gitea shortcode: unable to fetch %q: %s" $giteaURL .Position -}}
 {{- end -}}
 
 {{- with $giteaData -}}

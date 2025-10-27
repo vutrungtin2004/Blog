@@ -4,14 +4,11 @@
 {{- $showThumbnail := .Get "showThumbnail" | default true -}}
 {{- $repoColors := .Site.Data.repoColors -}}
 {{- $githubData := dict -}}
-{{- with try (resources.GetRemote $githubURL) -}}
-  {{- with .Err -}}
-    {{- warnf "github shortcode: failed to fetch remote resource from %q: %s" $githubURL $.Position -}}
-  {{- else with .Value -}}
-    {{- $githubData = . | transform.Unmarshal -}}
-  {{- else -}}
-    {{- warnf "github shortcode: unable to get remote resource from %q: %s" $githubURL $.Position -}}
-  {{- end -}}
+{{- $remote := resources.GetRemote $githubURL -}}
+{{- if $remote -}}
+  {{- $githubData = $remote | transform.Unmarshal -}}
+{{- else -}}
+  {{- warnf "github shortcode: unable to fetch %q: %s" $githubURL .Position -}}
 {{- end -}}
 
 {{- with $githubData -}}
