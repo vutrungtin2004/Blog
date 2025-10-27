@@ -9,7 +9,7 @@ description: "Chào mừng đến với blog cá nhân của tôi - nơi chia s�
   breakLines=false
   loop=false
 >}}
-Xin chào! Tôi là Trung Tín 👋
+Xin chào! Tôi là Trung Tín 🫶🏻
 {{< /typeit >}}
 
 {{< lead >}}
