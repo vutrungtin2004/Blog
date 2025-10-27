@@ -8,7 +8,7 @@
   {{- warnf "gitlab shortcode: unable to fetch %q: %s" $gitlabURL .Position -}}
 {{- end -}}
 
-{{- with $gitLabData -}}
+{{- with $gitlabData -}}
   <div class="gitlab-card-wrapper">
     <a id="{{ $id }}" target="_blank" href="{{ .web_url }}" class="cursor-pointer">
       <div
